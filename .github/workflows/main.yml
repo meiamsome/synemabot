@@ -1,6 +1,12 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - *
 
 jobs:
   lint:
@@ -27,6 +33,6 @@ jobs:
       run: npm ci
 
     - name: Annotated Jest
-      uses: stefanoeb/jest-action@master
+      uses: stefanoeb/jest-action@1.0.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
