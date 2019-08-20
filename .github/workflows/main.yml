@@ -30,7 +30,7 @@ jobs:
     - name: Install
       run: npm ci
 
-    - name: Annotated Jest
+    - name: Jest
       uses: stefanoeb/jest-action@1.0.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
